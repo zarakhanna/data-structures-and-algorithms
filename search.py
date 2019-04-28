@@ -1,5 +1,6 @@
 #!/bin/python
 # n iterations of the loop, O(n)
+import sys
 def search(list, key):
     for i in range(0, len(list)):
         if list[i] == key:
@@ -29,3 +30,26 @@ def binary_search(l, key):
 print(binary_search([1,2,3,4], 4) == 3)
 print(binary_search([1,2,3,4], 7) == -1)
 print(binary_search([1,2,3,4], 1) == 0)
+
+# MIN
+def min(l):
+     psn =  sys.maxint
+     for i in l:
+         if i < psn:
+             psn = i
+     return psn
+
+print(min([3,2,6,5,1,4]) == 1)
+print(min([3,2,6,-5,1,4]) == -5)
+print(min([4]) == 4)
+
+def max(l):
+     psn =  -sys.maxint - 1
+     for i in l:
+         if i > psn:
+             psn = i
+     return psn
+
+print(max([3,2,6,5,1,4]) == 6)
+print(max([3,8,6,-5,1,4]) == 8)
+print(max([4]) == 4)
